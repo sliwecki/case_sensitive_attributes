@@ -616,3 +616,83 @@ ActionController::RoutingError (No route matches [GET] "/v1/shipments/68/label")
   Rendered /Users/sliwecki/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
   Rendered /Users/sliwecki/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
   Rendered /Users/sliwecki/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.3ms)
+
+
+Started POST "/users?email=aaA@a.pl" for ::1 at 2016-03-02 13:46:31 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"aaa@a.pl", "receiver"=>{"first_name"=>"aaaaaaaaaaaaa"}}
+Unpermitted parameter: receiver
+Unpermitted parameter: receiver
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 67704ms (ActiveRecord: 0.4ms)
+
+NoMethodError (undefined method `capitalize' for nil:NilClass):
+  app/controllers/users_controller.rb:5:in `create'
+
+
+  Rendered /Users/sliwecki/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (30.8ms)
+  Rendered /Users/sliwecki/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/sliwecki/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.9ms)
+  Rendered /Users/sliwecki/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.7ms)
+
+
+Started POST "/users" for ::1 at 2016-03-02 14:02:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"sAAAsqAA2Aa.pl", "receiver"=>{"first_name"=>"aaaaaaaaaaaaa"}}
+Unpermitted parameter: receiver
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("email") VALUES (?)[0m  [["email", "sAAAsqAA2Aa.pl"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Completed 200 OK in 117375ms (Views: 0.4ms | ActiveRecord: 2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+
+
+Started POST "/users" for ::1 at 2016-03-02 14:08:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"sAAAsqAA2Aa.pl", "receiver"=>{"first_name"=>"aaaaaaaaaaaaa"}}
+Unpermitted parameter: receiver
+Unpermitted parameter: receiver
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email") VALUES (?)[0m  [["email", "sAAAsqAA2Aa.pl"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Completed 200 OK in 19293ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for ::1 at 2016-03-02 14:09:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"sAAAsqAA2Aa.pl", "receiver"=>{"first_name"=>"aaaaaaaaaaaaa"}}
+Unpermitted parameter: receiver
+Unpermitted parameter: receiver
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("email") VALUES (?)[0m  [["email", "sAAAsqAA2Aa.pl"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Completed 200 OK in 51199ms (Views: 0.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users" for ::1 at 2016-03-02 14:10:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"sAAAsqAA2Aa.pl", "receiver"=>{"first_name"=>"aaaaaaaaaaaaa"}}
+Unpermitted parameter: receiver
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email") VALUES (?)[0m  [["email", "sAAAsqAA2Aa.pl"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 200 OK in 1894ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for ::1 at 2016-03-02 14:13:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"saaasqaa2aa.pl", "receiver"=>{"first_name"=>"aaaaaaaaaaaaa"}}
+Unpermitted parameter: receiver
+Unpermitted parameter: receiver
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email") VALUES (?)[0m  [["email", "saaasqaa2aa.pl"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Completed 200 OK in 26366ms (Views: 0.3ms | ActiveRecord: 1.9ms)
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1

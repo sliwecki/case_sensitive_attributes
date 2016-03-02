@@ -28,3 +28,18 @@ end
 ```
 >- allow kinds:
 [:capitalize, :downcase, :upcase]
+
+
+##### Set kinds for your params (form params or query string)
+
+```ruby
+module Dummy
+  class Application < Rails::Application
+    config.middleware.insert_after ActionDispatch::ParamsParser, CaseSensitiveAttributes::Middleware do
+     #params attribute: :kind
+      params email: :downcase
+    end
+  end
+```
+>- allow kinds:
+[:capitalize, :downcase, :upcase]

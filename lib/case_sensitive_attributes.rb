@@ -1,6 +1,7 @@
 require "case_sensitive_attributes/version"
 require "case_sensitive_attributes/incorrect_kind"
 require "case_sensitive_attributes/transformer"
+require "case_sensitive_attributes/middleware"
 
 module CaseSensitiveAttributes
   def case_sensitive_attributes(params)
