@@ -7,8 +7,7 @@ module CaseSensitiveAttributes
   def case_sensitive_attributes(params)
     params.each do |attribute, kind|
       before_validation do |record|
-        value = Transformer.call(record[attribute], kind)
-        record[attribute] = value
+        record[attribute] = Transformer.call(record[attribute], kind)
       end
     end
   end

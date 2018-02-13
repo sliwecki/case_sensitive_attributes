@@ -8,10 +8,8 @@ module CaseSensitiveAttributes
 
     def call(env)
       request = Rack::Request.new(env)
-
       replace(request.GET) if request.GET.present?
       replace(request.POST) if request.POST.present?
-
       @app.call(env)
     end
 

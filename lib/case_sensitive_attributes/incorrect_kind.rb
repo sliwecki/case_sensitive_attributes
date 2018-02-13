@@ -1,4 +1,3 @@
 module CaseSensitiveAttributes
-  class IncorrectKind < StandardError
-  end
+  class IncorrectKind < StandardError; end
 end
